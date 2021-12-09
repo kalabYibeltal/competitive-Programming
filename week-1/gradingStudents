@@ -1,0 +1,16 @@
+def gradingStudents(grades):
+    # Write your code here
+    i = 0
+    n = len(grades)
+    answer = []
+    while(i<n):
+        if(grades[i]<=37):
+            answer.append(grades[i])
+        elif((grades[i]+1)%5 == 0):
+            answer.append(grades[i]+1)
+        elif((grades[i]+2)%5 == 0):
+            answer.append(grades[i]+2)
+        else:
+            answer.append(grades[i])
+        i=i+1
+    return answer
