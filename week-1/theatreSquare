@@ -1,0 +1,21 @@
+def thearteSquare():
+  arr = input().split()
+	x = int(arr[0])
+	y = int(arr[1])
+	z = int(arr[2])
+	q = int(x/z)
+	w = int(y/z)
+	v = 0
+	if(x%z==0 and y%z==0):
+	    v = (x*y)/(z*z)
+	    print(int(v))
+	elif(x%z==0):
+	    v = ((x/z)*(int(y/z)))+(x/z)
+	    print(int(v))
+	elif(y%z==0):
+		v = ((y/z)*(int(x/z)))+(y/z)
+		print(int(v))
+	else:
+		v = (int(x/z))*(int(y/z))+int(y/z)+int(x/z)+1
+		print(int(v))
+thearteSquare()
