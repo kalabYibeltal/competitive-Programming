@@ -2,6 +2,7 @@
  * @param {number} n
  * @return {string[]}
  */
+#orignal push
 var fizzBuzz = function(n) {
     var answer =[];
     var i = 1;
