@@ -2,7 +2,7 @@
  * @param {number} n
  * @return {string[]}
  */
-#orignal push
+#orignal git push
 var fizzBuzz = function(n) {
     var answer =[];
     var i = 1;
