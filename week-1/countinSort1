@@ -1,0 +1,9 @@
+def countingSort(arr):
+    # Write your code here\
+    i=0
+    n=len(arr)
+    ar2 = [0]*100
+    while(i<n):
+        ar2[arr[i]]+=1
+        i+=1
+    return ar2
