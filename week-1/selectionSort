@@ -1,0 +1,22 @@
+class Solution: 
+    def select(self, arr, i):
+        # code here
+        x=i
+        k=i
+        minnum=arr[i]
+        while(k<len(arr)):
+            if(arr[k]<minnum):
+                minnum=arr[k]
+                x=k
+            k+=1
+        return x  
+    def selectionSort(self, arr,n):
+        #code here
+        j=0
+        while(j<n):
+            y=arr[j]
+            z=self.select(arr, j)
+            arr[j]=arr[z]
+            arr[z]=y
+            j+=1
+        return arr
