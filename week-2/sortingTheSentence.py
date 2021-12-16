@@ -1,16 +1,27 @@
 class Solution:
-    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
-        n=len(nums)
-        i=0
+    def sortSentence(self, s: str) -> str:
         
-        arr=[0]*n
-        while(i<n):
+        arr=s.split()
+        arr2=s.split()
+        arr3=s.split()
+        n=len(arr)
+        
+        i=1
+        z=""
+        while(i<n+1):
+            x=arr3[i-1]
             j=0
-            count=0
-            while(j<n):
-                if(nums[i]>nums[j]):
-                    count+=1
+            y=""
+            while(j<(len(x)-1)):
+                y=y+x[j]
                 j+=1
-            arr[i]=count
+            arr2[(int(arr[i-1][-1]))-1]=y
             i+=1
-        return arr
+        j=0
+        while(j<(len(arr2))):
+                if((j+1)==len(arr2)):
+                    z=z+arr2[j]
+                else:    
+                    z=z+arr2[j]+" "
+                j+=1
+        return z
