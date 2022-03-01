@@ -27,3 +27,20 @@ class Solution:
                 return subs(l,employees)
                
                 
+            
+# another implmentation            
+# def subs(i: 'Employee', dictr):
+#     sum=0
+#     for j in i.subordinates:
+#         sum+=subs(dictr[j],dictr)     
+#     return sum + i.importance
+       
+# class Solution:
+#     def getImportance(self, employees: List['Employee'], id: int) -> int:
+#         dictr={}
+#         for l in employees:
+#             dictr[l.id]=l
+#         return subs(dictr[id],dictr)
+               
+                     
+                
