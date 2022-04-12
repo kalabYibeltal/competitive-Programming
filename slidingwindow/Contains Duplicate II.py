@@ -11,7 +11,18 @@ class Solution:
 #         for i in dictr:
 #             if dictr[i][0] != dictr[i][-1] and abs(dictr[i][0] - dictr[i][-1]) <= k: return True
             
+# solution from the internet
+# class Solution:
+#     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+#         numSet = set()
         
+#         for i in range(len(nums)):
+#             if len(numSet) > k:
+#                 numSet.remove(nums[i-(k+1)])
+#             if nums[i] in numSet:
+#                 return True
+#             numSet.add(nums[i])
+#         return False       
         
         dictr = {}
  
