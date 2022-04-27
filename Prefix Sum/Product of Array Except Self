@@ -1,0 +1,42 @@
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        forw = {}
+        back = {}
+        prof = 1
+        prob = 1
+        arr = []
+        for i in range(0,len(nums)):
+            forw[i] = prof
+            prof = prof * nums[i]
+            back[len(nums)-1-i] = prob
+            prob = prob * nums[len(nums)-1-i]
+            
+            
+        for i in range(len(nums)):
+            arr.append(forw[i] * back[i])
+        return arr        
+        
+# Alternate solution with o(1) space complexity but not prefixSum implmentaion
+#         pro = 1
+#         zerop = 1
+#         count = 0
+#         for i in nums: 
+#             if i == 0: 
+#                 zerop = zerop * i
+#                 count += 1
+#                 continue
+#             pro = pro * i
+#         arr = []
+#         print(zerop, count)
+        
+        
+#         if zerop == 0 and count == 1:
+#             for i in nums: 
+#                 if i == 0: arr.append(pro)
+#                 else: arr.append(0)
+#         elif zerop == 0: arr= [0]*len(nums)
+#         else:
+#             for i in nums: arr.append(pro//i)
+                
+#         return arr
+        
