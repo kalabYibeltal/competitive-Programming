@@ -11,7 +11,7 @@ class Solution:
             rsum[k] |= set(map(sum, combinations(r, k)))
         
         
-        ans = float('inf')
+        ans = inf
         for k in lsum:
             rsum_cand = sorted(rsum[n // 2 - k])
             for ls in lsum[k]:
