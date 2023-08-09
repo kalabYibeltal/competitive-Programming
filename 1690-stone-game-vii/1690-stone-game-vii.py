@@ -18,18 +18,18 @@ class Solution:
 #         return dp(0,len(stones)-1,1)
         
         
-        dp = [[[0 for i in range(len(stones))] for j in range(len(stones))] for k in range(2)]
+        dp = [[0 for i in range(len(stones))] for j in range(len(stones))]
         #0 for alice 1 for bob
         # print(dp)
         for line in range(1,len(stones)):
             for right in range(line, len(stones)):
-                for turn in range(2):
-                    left = right - line
-                    dp[turn][left][right] =  max(prefix[right+1] - prefix[left+1] - dp[1-turn][left+1][right], prefix[right] - prefix[left] - dp[1-turn][left][right -1])
+                
+                left = right - line
+                dp[left][right] =  max(prefix[right+1] - prefix[left+1] - dp[left+1][right], prefix[right] - prefix[left] - dp[left][right -1])
                     
                 
                 
-        return dp[0][0][len(stones)-1]
+        return dp[0][len(stones)-1]
         
         
         
