@@ -18,6 +18,7 @@ class Solution:
                 else:
                     dist = dist2
                     heater_ptr = index
+                     
             answer = max (answer, dist)
 
         return answer
