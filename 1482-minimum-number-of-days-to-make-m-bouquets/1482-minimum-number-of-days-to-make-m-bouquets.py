@@ -19,7 +19,7 @@ class Solution:
             return False
         
         sb = sorted(bloomDay)
-        left , right = 0,  len(bloomDay) - 1
+        left , right = m*k - 1,  len(bloomDay) - 1
         
         while left < right:
             mid = (left + right)//2
